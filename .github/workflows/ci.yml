@@ -11,4 +11,4 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python training/train.py
       - run: python training/evaluate.py
-      - run: docker build -t churn-model .
+      - run: docker build -t churn-model -f docker/Dockerfile .
