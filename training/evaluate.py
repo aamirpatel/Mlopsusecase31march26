@@ -7,7 +7,7 @@ model = pickle.load(open("model/model.pkl", "rb"))
 data = pd.read_csv("data/validate.csv")
 print("DEBUG isna check:")
 print(data.isna().sum())
-``
+
 X = data[["usage_hours", "monthly_charges"]]
 y = data["churn"]
 
