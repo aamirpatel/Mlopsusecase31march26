@@ -11,5 +11,8 @@ y = data["churn"]
 acc = accuracy_score(y, model.predict(X))
 print("Accuracy:", acc)
 
+print(data)
+print(data.isna().sum())
+
 if acc < 0.75:
     raise Exception("Model quality gate failed")
