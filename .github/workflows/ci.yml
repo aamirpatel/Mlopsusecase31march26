@@ -1,1 +1,14 @@
 
+name: MLOps Pipeline
+
+on: workflow_dispatch
+
+jobs:
+  train-test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: pip install -r requirements.txt
+      - run: python training/train.py
+      - run: python training/evaluate.py
+      - run: docker build -t churn-model .
