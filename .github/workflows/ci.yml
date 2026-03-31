@@ -1,7 +1,7 @@
 
 name: MLOps Pipeline
 
-on: workflow_dispatch
+on: [push]
 
 jobs:
   train-test-build:
